@@ -11,7 +11,7 @@ html, body {
 
 
 .pattern {
-	background-image: url(star.gif);
+	background-image: url(../img/star.gif);
   background-size: 120px 120px;
 }
 
@@ -59,7 +59,7 @@ html, body {
 }
 
 .minip {
-    margin: 10% 15% 15% 15%;
+    margin: 5% 10% 10% 10%;
 }
 
 .lesson {
