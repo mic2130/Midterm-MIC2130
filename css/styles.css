@@ -1,33 +1,32 @@
-
-
 /*structures*/
+
 html, body {
-	margin: 0;
-	padding: 0;
-	font-family: 'Inconsolata', monospace, Helvetica, Arial, sans-serif;
-	color: black;
-	text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inconsolata', monospace, Helvetica, Arial, sans-serif;
+    color: black;
+    text-align: center;
 }
 
-
 .pattern {
-	background-image: url(../img/star.gif);
-  background-size: 120px 120px;
+    background-image: url(../img/star.gif);
+    background-size: 120px 120px;
 }
 
 .frame {
-	background-color: white;
-	border: 20px solid #181815;
-	padding: 0;
+    background-color: white;
+    border: 20px solid #181815;
+    padding: 0;
 }
 
 .blackbackground {
-	background-color: #181815;
+    background-color: #181815;
 }
 
 .whitebackground {
-  padding: 30px;
+    padding: 30px;
 }
+
 
 /*texts*/
 
@@ -35,7 +34,7 @@ html, body {
     margin: auto;
     margin-top: 5%;
     margin-bottom: 5%;
-		font-size: 1.3em;
+    font-size: 1.3em;
     width: 400px;
 }
 
@@ -46,16 +45,14 @@ html, body {
     text-align: center;
 }
 
-
-
 .formp {
     margin: auto;
     margin-top: 15%;
     margin-bottom: 15%;
-		padding-left: 10px;
+    padding-left: 10px;
     width: 300px;
     text-align: left;
-		border-left: 1px solid black;
+    border-left: 1px solid black;
 }
 
 .minip {
@@ -63,23 +60,23 @@ html, body {
 }
 
 .lesson {
-	color: white;
-	width: 400px;
-	margin: auto;
-	margin-top: 10%;
-	margin-bottom: 10%;
-	text-align: center;
-	font-size: 1.2em;
+    color: white;
+    width: 400px;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    text-align: center;
+    font-size: 1.2em;
 }
 
 .playp {
-  position: absolute;
-   top: 85px;
-   left: 0;
-   width: 100%;
-   color: yellow;
-   font-size: 120%;
-   font-weight: bold;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    color: yellow;
+    font-size: 120%;
+    font-weight: bold;
 }
 
 h1 {
@@ -98,14 +95,13 @@ h2 {
 }
 
 a {
-	color: black;
+    color: black;
 }
 
 a:hover {
-	text-decoration: none;
-	color: black;
+    text-decoration: none;
+    color: black;
 }
-
 
 
 /*buttons*/
@@ -130,7 +126,6 @@ button:hover, button:focus {
 
 /*images*/
 
-
 .logo {
     display: block;
     margin: auto;
@@ -141,7 +136,7 @@ button:hover, button:focus {
 }
 
 .centerimage {
-		max-width: 15%;
+    max-width: 15%;
 }
 
 .gameimages {
@@ -151,10 +146,9 @@ button:hover, button:focus {
 
 .trainingquote {
     margin-right: 10%;
-		margin-top: 40%;
-		width: 200%;
+    margin-top: 40%;
+    width: 140px;
 }
-
 
 
 /***** Modal *****/

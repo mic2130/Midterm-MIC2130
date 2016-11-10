@@ -1,4 +1,3 @@
-
 /***************************** MY PSEUDOCODE ****************************/
 
 /*----------------------------------------------------------------------*/
@@ -143,61 +142,75 @@ var left, opacity, scale; //fieldset properties wich we will animate
 
 
 //HERE IS THE FUNCTION CLICK TO GO NEXT
-$(".next").click(function(){  //when click on the button with .next class call the function that sets the variable current_fs as the parent and next_fs as the next fieldset after the parent.
-	current_fs = $(this).parent();
-	next_fs = $(this).parent().next();
+$(".next").click(function() { //when click on the button with .next class call the function that sets the variable current_fs as the parent and next_fs as the next fieldset after the parent.
+    current_fs = $(this).parent();
+    next_fs = $(this).parent().next();
 
 
-	//show the next fieldset
-	next_fs.show();
+    //show the next fieldset
+    next_fs.show();
 
-	//I think this whole function current_fs.animate({},{})  is about the animation of the hide and show function. It hide the current fieldset with style and show the next one, it change the opacity of the elements and move them from different sides, but I am not familiar with the code structure.
-	current_fs.animate({opacity: 0}, {
-		step: function(now, mx) {
-			//as the opacity of current_fs reduces to 0 - stored in "now"
-			//1. scale down current_fs
-			scale = 1 - (1 - now) * 0.2;
-			//2. bring next_fs
-			top = (now * 50)+"%";
-			//3. increase opacity of next_fs
-			opacity = 1 - now;
-			current_fs.css({'transform': 'scale('+scale+')'});
-			next_fs.css({'left': left, 'opacity': opacity});
-		},
-		duration: 100, //this define the duration of the whole animation!
-		complete: function(){
-			current_fs.hide();
-		},
-		//this comes from a plugin
-		easing: 'easeInOutBack'
-	});
+    //I think this whole function current_fs.animate({},{})  is about the animation of the hide and show function. It hide the current fieldset with style and show the next one, it change the opacity of the elements and move them from different sides, but I am not familiar with the code structure.
+    current_fs.animate({
+        opacity: 0
+    }, {
+        step: function(now, mx) {
+            //as the opacity of current_fs reduces to 0 - stored in "now"
+            //1. scale down current_fs
+            scale = 1 - (1 - now) * 0.2;
+            //2. bring next_fs
+            top = (now * 50) + "%";
+            //3. increase opacity of next_fs
+            opacity = 1 - now;
+            current_fs.css({
+                'transform': 'scale(' + scale + ')'
+            });
+            next_fs.css({
+                'left': left,
+                'opacity': opacity
+            });
+        },
+        duration: 100, //this define the duration of the whole animation!
+        complete: function() {
+            current_fs.hide();
+        },
+        //this comes from a plugin
+        easing: 'easeInOutBack'
+    });
 });
 
 
 //HERE IS THE FUNCTION CLICK TO GO PREVIOUS
 //This function makes something similar to the last one but instead of call the next_fs it calls the previous one when the user click in the previous button.
 
-$(".previous").click(function(){
-	current_fs = $(this).parent();
-	previous_fs = $(this).parent().prev();
+$(".previous").click(function() {
+    current_fs = $(this).parent();
+    previous_fs = $(this).parent().prev();
 
 
-	previous_fs.show();
-	current_fs.animate({opacity: 0}, {
-		step: function(now, mx) {
+    previous_fs.show();
+    current_fs.animate({
+        opacity: 0
+    }, {
+        step: function(now, mx) {
 
-			scale = 0.8 + (1 - now) * 0.2;
-			left = ((1-now) * 50)+"%";
-			opacity = 1 - now;
-			current_fs.css({'left': left});
-			previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
-		},
-		duration: 100,
-		complete: function(){
-			current_fs.hide();
-		},
-		easing: 'easeInOutBack'
-	});
+            scale = 0.8 + (1 - now) * 0.2;
+            left = ((1 - now) * 50) + "%";
+            opacity = 1 - now;
+            current_fs.css({
+                'left': left
+            });
+            previous_fs.css({
+                'transform': 'scale(' + scale + ')',
+                'opacity': opacity
+            });
+        },
+        duration: 100,
+        complete: function() {
+            current_fs.hide();
+        },
+        easing: 'easeInOutBack'
+    });
 });
 
 
@@ -205,7 +218,7 @@ $(".previous").click(function(){
 //This function only generates the alert that told you that you finished the training. To download the word document I will need another function to make the computer do so. That function is explained in the pseudocode above.
 
 var savefunction = function() {
-  alert("CONGRATULATIONS! Your structure is ready, now you can write your speech in the document that have been downloaded");
+    alert("CONGRATULATIONS! Your structure is ready, now you can write your speech in the document that have been downloaded");
 };
 
-document.getElementById('savebutton').addEventListener('click',savefunction);
+document.getElementById('savebutton').addEventListener('click', savefunction);
